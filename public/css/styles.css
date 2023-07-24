@@ -70,6 +70,7 @@ header {
   color: var(--white);
   font-size: 18px;
   font-weight: 500;
+  margin-top: 2rem;
 }
 
 .coins {
