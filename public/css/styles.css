@@ -1,0 +1,134 @@
+:root {
+  --white: #FFF;
+  --blue: #4c79d3;
+  --purple: #4e0070;
+}
+
+.primary-color {
+  color: var(--purple);
+}
+
+.secondary-color {
+  color: var(--blue);
+}
+
+.button-default {
+  border-radius: 10px;
+  background: var(--purple);
+  color: var(--white);
+}
+
+/* Home Page */
+#app {
+  background: linear-gradient(120deg, var(--white) 44.9%, var(--blue) 45%) no-repeat fixed;
+}
+
+header {
+  border-bottom: 1px solid #bebebc;
+  padding: 5px;
+  background: var(--white);
+}
+
+.icon-detail {
+  font-size: 50px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.info {
+  background: var(--white);
+  border-radius: 20px 20px 0 0;
+  padding: 20px 0 0 0;
+  margin-left: 0.75rem;
+}
+
+.float-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  height: 60px;
+  width: 60px;
+  padding: 0 !important;
+  border-radius: 100%;
+  border: 2px solid var(--purple);
+  background: var(--purple);
+  color: var(--white);
+  font-size: 35px;
+}
+
+.float-button:hover {
+  border: 2px solid #843da3;
+  background: #843da3;
+}
+
+/* Login Page */
+#login {
+  background: linear-gradient(120deg, var(--blue) 44.9%, var(--white) 45%) no-repeat fixed;
+}
+
+.text-login {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.coins {
+  position: absolute;
+  bottom: 90px;
+}
+
+.button-login {
+  border-radius: 10px;
+  background: var(--purple);
+  color: var(--white);
+  width: 50%;
+  margin: 0 25%;
+}
+
+.button-login:hover, .button-default:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.button-cancel {
+  border-radius: 10px;
+}
+
+.link-default {
+  color: var(--purple);
+  cursor: pointer;
+}
+
+.link-default:hover {
+  color: var(--blue);
+}
+
+.alert-user {
+  display: block;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+}
+
+.logout {
+  min-width: 4rem !important;
+}
+
+.remove-icon {
+  color: rgb(162, 25, 25);
+  cursor: pointer;
+}
+
+.remove-icon:hover {
+  opacity: 0.7;
+}
+
+.edit-icon {
+  color: var(--purple);
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.edit-icon:hover {
+  opacity: 0.7;
+}
