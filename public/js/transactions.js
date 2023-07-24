@@ -98,6 +98,9 @@ function getTransactions() {
 
 function removeTransaction(e) {
     data.transactions = removeFromUserData(data.transactions, parseFloat(e.target.id));
+    if(!data.transactions.length) {
+      window.location.href = 'transactions.html';
+    }
     saveData(data)
     getTransactions();
 }
@@ -173,7 +176,7 @@ function successAlertUser(target) {
       alertEdit.classList.remove('alert-user')
       alertEdit.classList.add('d-none')
     }, 4000)
-    
+
   } else {
     alert.classList.add('alert-user');
     alert.classList.remove('d-none');
