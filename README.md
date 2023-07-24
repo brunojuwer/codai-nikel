@@ -2,12 +2,19 @@
 
 ## Projeto referente ao curso codaí da [@GrowDev](https://www.growdev.com.br/)
 
-### Tecnologias utilizadas
+### Tecnologias utilizadas:
 
 - HTML
 - CSS
 - Javascript
 - Bootstrap
+
+### Features que foram adicionadas a mais na aplicação:
+
+- Excluir um lançamento
+- Editar um lançamento
+- Alertas personalizados
+- Favicon nas páginas
 
 ### Caso queira testar pode acessar o link = [NIKEL](https://nikel.juwer.com.br/) 
 
