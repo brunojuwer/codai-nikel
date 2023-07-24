@@ -129,19 +129,19 @@ function editTransaction(e) {
 }
 
   modalEditForm.addEventListener('submit', event => {
-    event.preventDefault()
-
+    event.preventDefault();
 
     const value = parseFloat(modalEditForm.transactionValueEdit.value);
     const description = modalEditForm.transactionDescriptionEdit.value;
     const date = modalEditForm.transactionDateEdit.value;
     const type = document.querySelector('input[name="transactionTypeEdit"]:checked').value;
 
-    const obj = {id: parseFloat(transactionId), value, description, date, type}
+    const obj = {id: parseFloat(transactionId), value, description, date, type};
 
-    updateTransaction(obj)
+    updateTransaction(obj);
     
     myModalEdit.hide();
+    successAlertUser('edit');
   })
 
 function updateTransaction(obj) {
@@ -161,21 +161,35 @@ function updateTransaction(obj) {
 
 
 // Alerts
-function successAlertUser() {
+function successAlertUser(target) {
   const alert = document.querySelector('[data-js-custom-alert-success]');
-  alert.classList.add('alert-user')
-  alert.classList.remove('d-none')
+  const alertEdit = document.querySelector('[data-js-custom-alert-success-edit]');
+
+  if(target === 'edit') {
+    alertEdit.classList.add('alert-user');
+    alertEdit.classList.remove('d-none');
+
+    setTimeout(()=> {
+      alertEdit.classList.remove('alert-user')
+      alertEdit.classList.add('d-none')
+    }, 4000)
+    
+  } else {
+    alert.classList.add('alert-user');
+    alert.classList.remove('d-none');
+
+    setTimeout(()=> {
+      alert.classList.remove('alert-user')
+      alert.classList.add('d-none')
+    }, 4000)
+  }
   
-  setTimeout(()=> {
-    alert.classList.remove('alert-user')
-    alert.classList.add('d-none')
-  }, 4000)
 }
 
 // Botão de logout
 document.querySelector('#button-logout').addEventListener('click', e => {
-  sessionStorage.removeItem('logged')
-  localStorage.removeItem('session')
+  sessionStorage.removeItem('logged');
+  localStorage.removeItem('session');
 
-  window.location.href = 'index.html'
+  window.location.href = 'index.html';
 })
